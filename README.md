@@ -26,6 +26,13 @@ Inspired by their work, I decided to recreate my own report, incorporating new t
 
 6. Then I created an interactive bar graph and a matrix that, with the help of bookmarks, switch between AM and PM hours.
 
+7. I created two overlapping visualizations and inserted related bookmarks to toggle between them.
+   
+![image](https://github.com/user-attachments/assets/f263c31b-5f9e-4fb5-b0e5-136110f88380)
+
+![image](https://github.com/user-attachments/assets/2e0703e3-fec9-44c2-85f8-41da4a887ab3)
+
+
 
 
 
