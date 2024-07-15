@@ -45,7 +45,7 @@ I am not sure whether this is an actual fact or a mistake in the database docume
 I am suspicious of this observation and lean towards the idea that it may be a documentation error. The reason is that similar inconsistencies were observed in the [Journey Status] column:
     + 18 trips, which actually arrived on time, were falsely recorded as delayed: 
     
-    ![image](https://github.com/user-attachments/assets/d247ef05-6bdb-48ee-903e-05e83cd4ff67)
+![image](https://github.com/user-attachments/assets/d247ef05-6bdb-48ee-903e-05e83cd4ff67)
 
 ## Recommendations 
 
