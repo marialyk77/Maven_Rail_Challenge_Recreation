@@ -1,65 +1,70 @@
-# Maven Rail Challenge - Recreation 
+# British Railway Performance Analysis
 
-This report was created as part of my commitment to continuous self-improvement.
+## Overview
 
-After submitting my first report for the Maven Rail Challenge, I reviewed the work of other contestants. Some of their reports were truly admirable.
+This report provides a detailed analysis of the UK railway system, focusing on operational performance, passenger behavior, and the financial impact of disruptions. The aim is to offer actionable insights that can help improve service reliability, optimize operations, and enhance the customer experience.
 
-Inspired by their work, I decided to recreate my own report, incorporating new techniques that I observed from the other participants.
+## Purpose
 
-## New techniques:
-1. I added a white-filled shape behind all the visuals to create white space, giving them a cleaner look and better contrast with the background.
-2. I created a line graph highlighting the Max and Min values by applying custom formatting.
-3. I combined the line graph with a table focusing on financial aspects.
-4. Inspired by: https://www.youtube.com/watch?v=hmk6PxDtbNs
-  
-![image](https://github.com/user-attachments/assets/c71e98ed-4f27-4aaf-b977-c76902c784b3)
+The purpose of this report is to:
+- Examine key trends in disruptions, delays, and cancellations.
+- Analyze passenger behavior patterns, including booking lead times, journey durations, and payment methods.
+- Assess the impact of operational issues on revenue.
+- Provide recommendations to improve service reliability, reduce delays, and optimize ticket sales.
 
-+ Dax used for the conditional formatting:
-![carbon](https://github.com/user-attachments/assets/bea8344b-e003-4d32-90c5-bc4be51b5252)
+## Key Insights
 
-4. Leveraging the visual impact of white space, I created a cluster of two different visuals: a pie chart and a bar graph. This approach helps visualize the question of which ticket class and ticket type are most common in a cohesive unit.
-   + Inspired by: https://www.youtube.com/watch?v=v6fP8gyCLLc
+- **Peak Travel Periods:**
+   - March recorded the highest number of journeys (8,117), closely followed by January (8,111).
+   - March also led in cancellations, delays, and refunded passengers, while January saw the highest revenue and the largest refund amounts.
+   - The **top route in total journeys** is Manchester Piccadilly to Liverpool Lime Street, while the **top revenue-generating route** is London Kings Cross to York.
 
-![image](https://github.com/user-attachments/assets/8f2258d2-d103-4c1e-a42d-4bbb08a001e3)
+- **Delays and Cancellations:**
+   - A significant number of journeys experience delays beyond 15 minutes.
+   - Refund percentages are highest for moderate delays (1-30 minutes), peaking at 60.7% for delays of 1-5 minutes.
+   - Interestingly, 12 passengers received refunds despite no recorded delays.
+   - **Delay Causes:** Weather (1,372 instances) is the most frequent cause of delays, followed by signal failures (970) and staff shortages (809). Traffic, while rare, causes severe delays, with half of traffic-related delays lasting over 7 hours.
+   - **Cancellations:** Signal failures are the leading cause of cancellations, followed by staff shortages and weather. March saw a sharp rise in cancellations (+14.6%).
 
-5. I extracted the hour from the original Departure Time and formatted it in a 12-hour clock, adding AM or PM to indicate the part of the day.
-   + Inspired by:https://mavenanalytics.io/project/15628 
-  
-![image](https://github.com/user-attachments/assets/2ad3b2fa-3c27-4efb-b436-7482f9103bd7)
+- **Journey Durations:**
+   - **First Class** passengers generally take longer journeys (average of 73.26 minutes) compared to Standard Class.
+   - **Journey durations** tend to be more stable in the morning, midday, and evening, while the afternoon shows more variability. The shortest journeys tend to occur in the evening, with 50% lasting 60 minutes or less.
 
-6. Then I created an interactive bar graph and a matrix that, with the help of bookmarks, switch between AM and PM hours.
+- **Ticket Purchase Behavior:**
+   - Online ticket purchases peak in the morning (69.0%) and at night (35.1%), likely reflecting booking patterns before or after work hours.
+   - Station ticket purchases peak in the afternoon (51.2%) and late at night (64.9%).
+   - **Most common booking window:** 1-3 days before travel (14,395 journeys), followed closely by same-day bookings (14,092 journeys).
+   - **Railcard holders** account for 33.9% of journeys, with non-Railcard holders making up the remaining 66.1%. This suggests that frequent travelers might not always rely on discounts.
 
-7. I created two overlapping visualizations and inserted related bookmarks to toggle between them.
-   
-![image](https://github.com/user-attachments/assets/f263c31b-5f9e-4fb5-b0e5-136110f88380)
+- **Refunds and Cancellations:**
+   - The route with the most cancellations is **Liverpool Lime Street to Birmingham New Street**.
+   - **Routes with 100% delays:** Edinburgh Waverley to London Kings Cross, London Euston to York, and York to Wakefield.
+   - **Highest refund amount:** £13,126 for the Liverpool Lime Street to London Euston route, with a delay rate of 71.1% and a cancellation rate of 9%.
 
-![image](https://github.com/user-attachments/assets/2e0703e3-fec9-44c2-85f8-41da4a887ab3)
+## Methodology
 
- + Inspired by: https://mavenanalytics.io/project/15628 and https://www.youtube.com/watch?v=_HTF7Ph7Eqc&t=406s
+- **Data Sources:** The data used for this analysis comes from the Maven Analytics Rail Challenge, which includes operational data from UK railways, passenger behavior, and revenue information.
+- **Tools Used:** Microsoft Power BI was used for data visualization and analysis.
+- **Assumptions:** A simulated 10% fare adjustment was applied to estimate revenue loss, and refund requests were based on average ticket prices (without confirmation of processing).
 
-## Key Findings:
-+ 580 passengers received refunds even though they did not experience any delays.
-  
-I am not sure whether this is an actual fact or a mistake in the database documentation.
+## Recommendations
 
-I am suspicious of this observation and lean towards the idea that it may be a documentation error. The reason is that similar inconsistencies were observed in the [Journey Status] column:
+- **Traffic Management:** Addressing traffic management can help reduce severe delays, particularly on routes where traffic-related disruptions are most impactful.
+- **Staffing and Signal Reliability:** Enhancing staffing levels and improving signal infrastructure would help reduce delays and cancellations caused by weather, staff shortages, and signal failures.
+- **Revenue Optimization:** Exploring fare adjustments or offering better-targeted promotions for off-peak hours could help optimize revenue, particularly for routes that experience high variability in journey times.
 
-+ 18 trips, which actually arrived on time, were falsely recorded as delayed: 
-    
-![image](https://github.com/user-attachments/assets/d247ef05-6bdb-48ee-903e-05e83cd4ff67)
+## Data Sources
 
-## Recommendations 
+The data for this analysis was sourced from the following:
 
-+ Discussion with Stakeholders: These findings should be discussed with relevant stakeholders to confirm the accuracy of the data. Understanding the root cause of these discrepancies is crucial.
-  
-+ Data Cleaning: If these inconsistencies are due to documentation errors, the database needs thorough cleaning and validation to ensure accuracy.
-  
-+ Reexamine Refund Criteria: If it is confirmed that passengers with no delays received refunds, we need to reexamine and possibly revise the refund criteria and processes to prevent unwarranted refunds in the future.
+1. **Maven Analytics Rail Challenge:**  
+   The primary dataset used for this analysis was sourced from the [Maven Analytics Rail Challenge](https://mavenanalytics.io/challenges/maven-rail-challenge/08941141-d23f-4cc9-93a3-4c25ed06e1c3).
 
+## How to Use This Report
 
-
-
-
+1. **Review Key Insights:** The report provides a comprehensive overview of operational performance, delays, and cancellations.
+2. **Explore Interactive Visualizations:** Power BI visualizations allow for interactive exploration of data, enabling you to filter by routes, time periods, and more.
+3. **Decision Support:** The insights provided are aimed at helping stakeholders make informed decisions to improve performance, reduce cancellations, and optimize passenger experience.
 
 
-  
+
